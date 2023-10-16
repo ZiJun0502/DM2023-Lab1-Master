@@ -5,6 +5,17 @@ Helper functions for data mining lab session 2018 Fall Semester
 Author: Elvis Saravia
 Email: ellfae@gmail.com
 """
+def format_record(docs):
+    """ format the text and label"""
+    texts = []
+    labels = []
+    temp_d = docs.split('\n')
+    
+    for d in temp_d:
+        text, label = d.split('\t')
+        texts.append(text)
+        labels.append(label)
+    return [texts, labels]
 
 def format_rows(docs):
     """ format the text field and strip special characters """
