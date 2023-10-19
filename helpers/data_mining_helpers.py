@@ -12,9 +12,9 @@ def format_record(docs):
     temp_d = docs.split('\n')
     
     for d in temp_d:
-        text, label = d.split('\t')
-        texts.append(text)
-        labels.append(label)
+        temp = d.split('\t')
+        texts.append(temp[0])
+        labels.append(temp[1])
     return [texts, labels]
 
 def format_rows(docs):
